@@ -6,13 +6,22 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "preview": "expo preview",
+    "build:android": "eas build --platform android",
+    "build:ios": "eas build --platform ios",
+    "typescript": "tsc --noEmit"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "axios": "^1.13.6",
     "expo": "~55.0.6",
+    "expo-camera": "^55.0.9",
+    "expo-image-picker": "^55.0.12",
     "expo-status-bar": "~55.0.4",
     "react": "19.2.0",
-    "react-native": "0.83.2"
+    "react-native": "0.83.2",
+    "react-native-gesture-handler": "^2.30.0"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
