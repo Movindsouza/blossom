@@ -46,16 +46,21 @@ const RecommendationScreen: React.FC<RecommendationScreenProps> = ({ onNavigate,
         pets,
       };
 
+      console.log('📤 Sending recommendation request:', request);
       const response = await claudeService.getPlantRecommendations(request);
+      console.log('📥 Received response:', response);
 
       if (response.success && response.data?.recommendations) {
+        console.log('✅ Success! Setting recommendations');
         setRecommendations(response.data.recommendations);
         setStep('results');
       } else {
+        console.log('❌ Response failed:', response.error);
         Alert.alert('Error', response.error || 'Failed to get recommendations');
         setStep('questions');
       }
     } catch (error) {
+      console.log('❌ Exception caught:', error);
       Alert.alert('Error', 'An error occurred while getting recommendations');
       setStep('questions');
     } finally {

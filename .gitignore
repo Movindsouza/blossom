@@ -3,6 +3,10 @@
 # dependencies
 node_modules/
 
+# Environment variables (never commit)
+.env
+.env.local
+
 # Expo
 .expo/
 dist/
@@ -17,6 +21,18 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
+
+# IDE
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
 
 # Metro
 .metro-health-check*
